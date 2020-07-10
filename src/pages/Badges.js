@@ -1,6 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 import BadgesList from "../components/BadgesList";
 import confLogo from "../images/PlatziConfLogo.svg";
 import TestData from "./TestData/TestData";
@@ -14,10 +13,7 @@ class Badges extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <Navbar />
-        </div>
+      <React.Fragment>
         <div className="Badges-hero">
           <img className="Badges-conf-logo" src={confLogo} alt="Conf Logo" />
         </div>
@@ -33,7 +29,7 @@ class Badges extends React.Component {
             <BadgesList badges={this.state.data} />
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
