@@ -1,7 +1,7 @@
 import React from "react";
 import headerLogo from "../images/PlatziConfLogo.svg";
 import Badge from "../components/Badge";
-import "../components/styles/BadgeNew.css";
+import "./styles/BadgeNew.css";
 
 class BadgeNew extends React.Component {
   state = {

@@ -10,4 +10,4 @@ function Layout(props) {
   );
 }
 
-export default Layouts;
+export default Layout;
