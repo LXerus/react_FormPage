@@ -1,0 +1,58 @@
+.Badges-list {
+    list-style-type: none;
+    margin: 0;
+}
+
+.list-item-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Badges-list-item{
+    padding-left: 20px;
+    padding-right: 50px;
+    border-radius: 10px;
+    margin: 10px 3px 10px 3px;
+    background-color: white;
+}
+
+.list-item-image{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.list-item-info{
+    margin: 5px;
+    padding: 5px;
+}
+
+.list-item-info h2{
+    font-family: cursive;
+}
+
+.list-item-info h3{
+    font-family: Helvetica, sans-serif;
+}
+
+.list-item-email{
+    font-weight: bold;
+}
+
+.list-item-info div{
+    display: flex;
+    align-items: center;
+}
+
+.list-item-info img{
+    height: 30px;
+    width: 30px;  
+    background-color: #00acee;
+    border-radius: 5px;
+}
+
+.list-item-info div p{
+    color: #00acee;
+    margin-left: 5px;
+}

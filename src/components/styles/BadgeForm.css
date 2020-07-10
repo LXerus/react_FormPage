@@ -1,0 +1,29 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-item{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.form-button{
+    width: 60%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;    
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #7DCD40;
+    border-color: #7DCD40;
+}
