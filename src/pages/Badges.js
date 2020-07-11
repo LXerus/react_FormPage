@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import Navbar from "../components/Navbar";
 import BadgesList from "../components/BadgesList";
 import confLogo from "../images/PlatziConfLogo.svg";
 import TestData from "./TestData/TestData";

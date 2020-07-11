@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import headerLogo from "../images/PlatziConfLogo.svg";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
