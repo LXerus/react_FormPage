@@ -1,15 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BadgesList from "../components/BadgesList";
-import confLogo from "../images/PlatziConfLogo.svg";
+import confLogo from "../images/logoconf.svg";
 import TestData from "./TestData/TestData";
 import "./styles/Badges.css";
-let testData = new TestData();
 
 class Badges extends React.Component {
-  state = {
-    data: testData.getData(),
-  };
+  constructor(props) {
+    super(props);
+    let testData = new TestData();
+    this.state = {
+      data: testData.getData(),
+    };
+  }
+
+  componentDidMount() {}
 
   render() {
     return (
@@ -25,9 +30,7 @@ class Badges extends React.Component {
           </div>
         </div>
         <div className="Badges-container">
-          <div className="Badges-list">
-            <BadgesList badges={this.state.data} />
-          </div>
+          <BadgesList badges={this.state.data} />
         </div>
       </React.Fragment>
     );

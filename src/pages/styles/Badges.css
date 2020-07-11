@@ -1,13 +1,12 @@
-html,body
-{
+html, body {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
-.Badges-container{
+.Badges-container {
     width: 100%;
     padding: 15px;
     margin: 0;
@@ -16,11 +15,11 @@ html,body
     justify-content: space-evenly;
 }
 
-.Badges-hero{
+.Badges-hero {
     width: 100%;
     padding: 30px 15px 30px 15px;
     margin: 0;
-    background-color: black;
+    background-color: #191919;
     background-image: url("../../images/estrellas.svg");
     display: flex;
     justify-content: center;
@@ -38,4 +37,18 @@ html,body
     color: white;
     font-weight: bold;
     line-height: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+    .Badges-hero {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0px 15px 0px;
+    }
+    .Badges-container {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0px 15px 0px;
+        margin: 0;
+    }
 }
