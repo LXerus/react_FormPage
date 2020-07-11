@@ -1,5 +1,5 @@
 import React from "react";
-import headerLogo from "../images/PlatziConfLogo.svg";
+import headerLogo from "../images/logoconf.svg";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
 import "./styles/BadgeNew.css";
