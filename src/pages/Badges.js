@@ -42,8 +42,12 @@ class Badges extends React.Component {
   }
 
   render() {
-    if (this.state.loading === true) {
+    if (this.state.loading) {
       return "Loading...";
+    }
+
+    if (this.state.error) {
+      return `Error: ${this.state.error.message}`;
     }
 
     return (
@@ -53,7 +57,7 @@ class Badges extends React.Component {
         </div>
         <div className="Badges-container">
           <div className="Badges-buttons">
-            <Link to="badges/new" className="btn-primary">
+            <Link to="/badges/new" className="btn-primary">
               New Badge
             </Link>
           </div>

@@ -4,6 +4,14 @@ import "./styles/BadgesList.css";
 
 class BadgesList extends React.Component {
   render() {
+    if(this.props.badges.length === 0){
+      return (
+        <div>
+          <h3>No se encontro ningún badge</h3>
+        </div>
+      );
+    }
+
     return (
       <ul className="Badges-list">
         {this.props.badges.map((badge) => {
