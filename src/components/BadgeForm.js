@@ -15,11 +15,10 @@ class BadgeForm extends React.Component {
   render() {
     return (
       <div className="form-container">
-        <form onSubmit={this.handleSubmit} className="form-container">
-          <h1>New Attendant</h1>
+        <form onSubmit={this.props.onSubmit} className="form-container">          
           <label className="form-item">Nombre</label>
           <input
-            onChange={this.handleChange}
+            onChange={this.props.onChange}
             className="form-item"
             type="text"
             name="firstName"
@@ -27,7 +26,7 @@ class BadgeForm extends React.Component {
           />
           <label className="form-item">Apellido</label>
           <input
-            onChange={this.handleChange}
+            onChange={this.props.onChange}
             className="form-item"
             type="text"
             name="lastName"
@@ -35,7 +34,7 @@ class BadgeForm extends React.Component {
           />
           <label className="form-item">Email</label>
           <input
-            onChange={this.handleChange}
+            onChange={this.props.onChange}
             className="form-item"
             type="email"
             name="email"
@@ -43,7 +42,7 @@ class BadgeForm extends React.Component {
           />
           <label className="form-item">Job Title</label>
           <input
-            onChange={this.handleChange}
+            onChange={this.props.onChange}
             className="form-item"
             type="text"
             name="jobTitle"
@@ -51,7 +50,7 @@ class BadgeForm extends React.Component {
           />
           <label className="form-item">Twitter</label>
           <input
-            onChange={this.handleChange}
+            onChange={this.props.onChange}
             className="form-item"
             type="text"
             name="twitter"
@@ -63,6 +62,9 @@ class BadgeForm extends React.Component {
           >
             Save
           </button>
+          {this.props.error && (
+            <h4 className="text-error">{this.props.error.message}</h4>
+          )}
         </form>
       </div>
     );

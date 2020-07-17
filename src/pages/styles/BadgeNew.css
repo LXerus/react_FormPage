@@ -17,11 +17,17 @@ html,body
 }
 
 .badgeNew-hero{
+    display: flex;
+    justify-content: center;
     width: 100%;
     padding: 30px 15px 30px 15px;
     margin: 0;
     background-color: #191919;
     background-image: url("../../images/estrellas.svg");
+}
+
+.hero-img{
+    max-height: 125px;
 }
 
 @media only screen and (max-width: 600px) {

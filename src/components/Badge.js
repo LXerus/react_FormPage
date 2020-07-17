@@ -1,6 +1,7 @@
 import React from "react";
 import PlatziConfLogo from "../images/PlatziConfLogo.svg";
 import MediaLogo from "../images/twitter.jpg";
+import Gravatar from  "./Gravatar";
 import "./styles/Badge.css";
 import "./styles/BadgeMobile.css";
 
@@ -13,20 +14,28 @@ class Badge extends React.Component {
             <img src={PlatziConfLogo} alt="img" />
           </div>
           <div className="badge-body">
-            <img className="profile-picture" src={this.props.profilePicture} alt="img" />
-            <p>
-              {this.props.userName}
-            </p>
+            <Gravatar
+              className="profile-picture"
+              email={this.props.email}
+              alt="Avatar"
+            />
+            <div className="badge-name">
+              <p>{this.props.firstName}</p>
+              <p>{this.props.lastName}</p>
+            </div>
           </div>
           <div className="badge-footer">
             <div className="badge-description">
-              <p>{this.props.userDescription}</p>
+              <p>{this.props.jobTitle}</p>
+            </div>
+            <div>
+            <p>{this.props.email}</p>
             </div>
             <div className="badge-social">
               <div className="badge-media-logo">
                 <img src={MediaLogo} alt="img" />
               </div>
-              <p className="badge-twitter-link">{this.props.userTwitter}</p>
+              <p className="badge-twitter-link">{this.props.twitter}</p>
             </div>
             <p className="badge-footer-tag">#PlatziConf</p>
           </div>
