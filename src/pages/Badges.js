@@ -6,7 +6,6 @@ import api from "../api";
 import PageLoader from "../components/PageLoader";
 import PageMiniLoader from "../components/PageMiniLoader";
 import PageError from "../components/PageError";
-//import TestData from "./TestData/TestData";
 import "./styles/Badges.css";
 
 class Badges extends React.Component {
@@ -42,7 +41,7 @@ class Badges extends React.Component {
   };
 
   render() {
-    if (this.state.loading === true && !this.state.data) {
+    if (this.state.loading && !this.state.data) {
       return <PageLoader />;
     }
 

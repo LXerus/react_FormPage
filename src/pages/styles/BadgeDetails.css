@@ -1,0 +1,85 @@
+.details-hero {
+    width: 100%;
+    padding: 30px 15px 30px 15px;
+    margin: 0;
+    background-color: #191919;
+    background-image: url("../../images/estrellas.svg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0px 15px 0px;
+    margin: 0;
+}
+
+.details-flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 5px;
+    color: azure;
+    text-align: center;
+}
+
+.btn-primary {
+    text-decoration: none;
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #7DCD40;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.btn-danger{
+    text-decoration: none;
+    display: block;
+    width: 135px;
+    height: 50px;
+    background: hsl(9, 69%, 38%);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.actions-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.action{
+    padding: 10px;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .details-hero {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0px 15px 0px;
+    }
+    
+    .details-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0px 10px 0px;
+        margin: 0;
+    }
+}

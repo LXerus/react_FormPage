@@ -4,24 +4,69 @@ import Gravatar from "../components/Gravatar";
 import "./styles/BadgesList.css";
 import { Link } from "react-router-dom";
 
-class BadgesList extends React.Component {
-  render() {
-    if (this.props.badges.length === 0) {
-      return (
-        <div>
-          <h3>No se encontro ningún badge</h3>
-        </div>
-      );
-    }
+function useSearchBadges(badges) {
+  const [query, setQuery] = React.useState("");
+  const [filteredBadges, setFilteredBadges] = React.useState(badges);
 
-    const badgesList = [...this.props.badges].reverse();
+  React.useMemo(() => {
+    const result = badges.filter((badge) => {
+      return `${badge.firstName} ${badge.lastName}`
+        .toLowerCase()
+        .includes(query.toLowerCase());
+    });
 
+    setFilteredBadges(result);
+  }, [badges, query]);
+
+  return { query, setQuery, filteredBadges };
+}
+
+function BadgesList(props) {
+  let badges = props.badges.reverse();
+
+  const { query, setQuery, filteredBadges } = useSearchBadges(badges);
+
+  if (filteredBadges.length === 0) {
     return (
+      <div className="Badges-list-container">
+        <div className="SearchBox-container">
+          <label>Search a Badge</label>
+          <input
+            type="text"
+            className="Barge-list-searchBox"
+            value={query}
+            onChange={(event) => {
+              setQuery(event.target.value);
+            }}
+          />
+        </div>
+
+        <h3>No badges were found</h3>
+        <Link className="btn btn-primary" to="/badges/new">
+          Create new badge
+        </Link>
+      </div>
+    );
+  }
+
+  return (
+    <div className="Badges-list-container">
+      <div className="SearchBox-container">
+        <label>Search a Badge</label>
+        <input
+          type="text"
+          className="Barge-list-searchBox"
+          value={query}
+          onChange={(event) => {
+            setQuery(event.target.value);
+          }}
+        />
+      </div>
       <ul className="Badges-list">
-        {badgesList.map((badge) => {
+        {filteredBadges.map((badge) => {
           return (
             <li className="Badges-list-item" key={badge.id}>
-              <Link className="list-itemlink" to={`/badges/${badge.id}/edit`} >
+              <Link className="list-itemlink" to={`/badges/${badge.id}`}>
                 <div className="list-item-container">
                   <div>
                     <Gravatar
@@ -47,8 +92,8 @@ class BadgesList extends React.Component {
           );
         })}
       </ul>
-    );
-  }
+    </div>
+  );
 }
 
 export default BadgesList;
